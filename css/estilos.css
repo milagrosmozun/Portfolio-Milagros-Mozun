@@ -1,0 +1,836 @@
+/* =============================================
+   1. VARIABLES
+   ============================================= */
+:root {
+    /* Colores */
+    --color-fondo:          #FFFFFF;
+    --color-fondo-alt:      #F5F6F8;
+    --color-tarjeta:        #FAFAFA;
+    --color-titulo:         #2C3E50;
+    --color-texto:          #455A64;
+    --color-acento:         #E67E22;   /* líneas y detalles decorativos */
+    --color-acento-texto:   #B35A12;   /* naranja para textos: contraste 4,8:1 sobre blanco */
+    --color-acento-fondo:   #B35A12;   /* naranja para fondos con texto blanco */
+    --color-borde:          #DDE1E5;
+    --color-barra:          #1A252F;
+    --color-barra-texto:    #FFFFFF;
+    --color-boton:          #2C3E50;
+    --color-boton-texto:    #FFFFFF;
+    --color-boton-hover:    #B35A12;
+    --color-boton-hover-txt:#FFFFFF;
+
+    /* Tipografías */
+    --fuente-titulos:   'Playfair Display', Georgia, serif;
+    --fuente-textos:    'Roboto', Arial, sans-serif;
+
+    /* Medidas */
+    --radio:            6px;
+    --sombra:           0 4px 20px rgba(44, 62, 80, 0.08);
+    --sombra-fuerte:    0 12px 32px rgba(44, 62, 80, 0.16);
+}
+
+
+/* =============================================
+   2. TEMA OSCURO
+   ============================================= */
+html[data-tema="oscuro"] {
+    --color-fondo:          #1A1D21;
+    --color-fondo-alt:      #15171A;
+    --color-tarjeta:        #25292E;
+    --color-titulo:         #E8EAED;
+    --color-texto:          #C5CCD3;
+    --color-borde:          #3A3F45;
+    --color-acento-texto:   #E67E22;   /* en fondo oscuro el naranja original contrasta bien */
+    --color-barra:          #0F1113;
+    --color-boton:          #E67E22;
+    --color-boton-texto:    #1A1D21;
+    --color-boton-hover:    #F39C4A;
+    --color-boton-hover-txt:#1A1D21;
+    --sombra:               0 4px 20px rgba(0, 0, 0, 0.4);
+    --sombra-fuerte:        0 12px 32px rgba(0, 0, 0, 0.55);
+}
+
+
+/* =============================================
+   3. TAMAÑO DE TEXTO (accesibilidad)
+   ============================================= */
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+html[data-texto="grande"] {
+    font-size: 18px;
+}
+
+html[data-texto="extra"] {
+    font-size: 20px;
+}
+
+
+/* =============================================
+   4. RESET Y ESTILOS BASE
+   ============================================= */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-textos);
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+h1, h2, h3 {
+    font-family: var(--fuente-titulos);
+    color: var(--color-titulo);
+    line-height: 1.25;
+    margin: 0 0 0.5rem;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+a {
+    color: var(--color-titulo);
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+code {
+    font-size: 0.875em;
+    color: var(--color-acento-texto);
+}
+
+/* Marca de foco visible para navegación con teclado */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--color-acento);
+    outline-offset: 3px;
+}
+
+
+/* =============================================
+   5. CONTENEDOR Y SECCIONES
+   ============================================= */
+.contenedor {
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.seccion {
+    padding: 3rem 0;
+    scroll-margin-top: 4.5rem;
+}
+.seccion-biografia,
+.seccion-ejercicios {
+    background-color: var(--color-fondo);
+}
+
+.seccion-destacados,
+.seccion-contacto {
+    background-color: var(--color-fondo-alt);
+}
+
+.encabezado-seccion {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.titulo-seccion {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Subrayado naranja debajo del título de sección */
+.titulo-seccion::after {
+    content: "";
+    display: block;
+    width: 56px;
+    height: 3px;
+    background-color: var(--color-acento);
+    margin: 0.75rem auto 0;
+}
+
+.subtitulo-seccion {
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+
+/* =============================================
+   6. ENCABEZADO Y MENÚ
+   ============================================= */
+.encabezado {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--color-barra);
+    padding: 0.75rem 0;
+}
+
+.encabezado-interno {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.marca {
+    font-family: var(--fuente-titulos);
+    font-size: 1.15rem;
+    color: var(--color-barra-texto);
+}
+
+.boton-menu {
+    background-color: transparent;
+    color: var(--color-barra-texto);
+    font-family: var(--fuente-textos);
+    font-size: 0.9rem;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--color-barra-texto);
+    border-radius: var(--radio);
+    cursor: pointer;
+}
+
+.navegacion {
+    display: none;
+    width: 100%;
+    padding-top: 1rem;
+}
+
+.navegacion.abierta {
+    display: block;
+}
+
+.lista-menu a {
+    display: block;
+    color: var(--color-barra-texto);
+    font-size: 0.95rem;
+    padding: 0.6rem 0;
+    border-bottom: 2px solid transparent;
+}
+
+.lista-menu a:hover {
+    border-bottom-color: var(--color-acento);
+}
+
+
+/* =============================================
+   7. PANEL DE ACCESIBILIDAD
+   ============================================= */
+.accesibilidad {
+    margin-top: 0.75rem;
+}
+
+.boton-accesibilidad {
+    width: 100%;
+    background-color: var(--color-acento-fondo);
+    color: #FFFFFF;
+    font-family: var(--fuente-textos);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: var(--radio);
+    cursor: pointer;
+}
+
+.panel {
+    display: none;
+    background-color: var(--color-tarjeta);
+    padding: 1rem;
+    margin-top: 0.75rem;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
+}
+
+.panel.abierto {
+    display: block;
+}
+
+.panel-titulo {
+    font-family: var(--fuente-titulos);
+    color: var(--color-titulo);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-acento);
+}
+
+.panel-etiqueta {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.grupo-botones {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.grupo-botones:last-child {
+    margin-bottom: 0;
+}
+
+.opcion {
+    flex-grow: 1;
+    background-color: transparent;
+    color: var(--color-titulo);
+    font-family: var(--fuente-textos);
+    font-size: 0.85rem;
+    padding: 0.45rem 0.5rem;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
+    cursor: pointer;
+}
+
+.opcion:hover {
+    border-color: var(--color-acento);
+}
+
+.opcion.activa {
+    background-color: var(--color-boton);
+    color: var(--color-boton-texto);
+    border-color: var(--color-boton);
+}
+
+
+/* =============================================
+   8. BOTONES
+   ============================================= */
+.boton {
+    display: inline-block;
+    background-color: var(--color-boton);
+    color: var(--color-boton-texto);
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.7rem 1.6rem;
+    border-radius: var(--radio);
+}
+
+.boton:hover {
+    background-color: var(--color-boton-hover);
+    color: var(--color-boton-hover-txt);
+}
+
+/* Botón con borde, para la acción secundaria (descargar CV) */
+.boton-secundario {
+    background-color: transparent;
+    color: var(--color-titulo);
+    border: 2px solid var(--color-boton);
+    padding: calc(0.7rem - 2px) calc(1.6rem - 2px);
+}
+
+.boton-secundario:hover {
+    border-color: var(--color-boton-hover);
+}
+
+/* Botones de la presentación, uno al lado del otro */
+.acciones-presentacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+
+/* =============================================
+   9. SECCIÓN INICIO
+   ============================================= */
+.presentacion {
+    text-align: center;
+    padding-bottom: 2.5rem;
+}
+
+.foto-perfil {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--color-borde);
+    margin-bottom: 1.25rem;
+}
+
+.presentacion h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.texto-presentacion {
+    max-width: 620px;
+    margin: 0 auto 2rem;
+    font-size: 1.05rem;
+}
+
+
+/* =============================================
+   10. SECCIÓN BIOGRAFÍA
+   ============================================= */
+.bloque-bio {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.bloque-bio:last-child {
+    margin-bottom: 0;
+}
+
+.bloque-bio img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+}
+
+.texto-bio p:last-child {
+    margin-bottom: 0;
+}
+
+.texto-bio strong {
+    color: var(--color-titulo);
+}
+
+
+/* =============================================
+   11. SECCIÓN PROYECTOS DESTACADOS
+   ============================================= */
+.grilla-destacados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem 0;
+}
+
+.destacado {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--color-fondo);
+    padding: 1.75rem 1.5rem;
+    border: 1px solid var(--color-borde);
+    border-top: 3px solid var(--color-acento);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+}
+
+.destacado:hover {
+    box-shadow: var(--sombra-fuerte);
+}
+
+.destacado h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+}
+
+.destacado .rol {
+    font-size: 0.9rem;
+}
+
+.destacado .rol strong {
+    color: var(--color-titulo);
+}
+
+/* Datos del proceso: */
+.datos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    border-top: 1px solid var(--color-borde);
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.datos li {
+    width: 100%;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.dato-numero {
+    display: block;
+    font-family: var(--fuente-titulos);
+    font-size: 1.75rem;
+    color: var(--color-acento-texto);
+}
+
+/* Herramientas y metodologías */
+.etiquetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.etiquetas li {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: var(--color-titulo);
+    padding: 0.3rem 0.7rem;
+    border: 1px solid var(--color-borde);
+    border-radius: 20px;
+}
+
+.nota {
+    font-size: 0.78rem;
+    font-style: italic;
+    margin-top: auto;
+    padding-top: 1rem;
+    margin-bottom: 0;
+}
+
+
+/* =============================================
+   12. SECCIÓN EJERCICIOS
+   ============================================= */
+.grilla-proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Separación sólo entre filas: el espacio horizontal
+       lo reparte space-between, así los % nunca desbordan */
+    gap: 1.5rem 0;
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--color-tarjeta);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    overflow: hidden;
+}
+
+.tarjeta:hover {
+    box-shadow: var(--sombra-fuerte);
+}
+
+.tarjeta > img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.tarjeta-cuerpo {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 1.25rem;
+}
+
+
+.tarjeta-cuerpo .boton {
+    align-self: flex-start;
+    margin-top: auto;
+    font-size: 0.875rem;
+    padding: 0.55rem 1.2rem;
+}
+
+.numero {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.tarjeta h3 {
+    font-size: 1.1rem;
+}
+
+.tarjeta p {
+    font-size: 0.9rem;
+}
+
+
+/* =============================================
+   13. SECCIÓN CONTACTO
+   ============================================= */
+.grilla-contacto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem 0;
+}
+
+.dato-contacto {
+    width: 100%;
+    background-color: var(--color-tarjeta);
+    padding: 1.25rem;
+    border: 1px solid var(--color-borde);
+    border-left: 3px solid var(--color-acento);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+}
+
+.dato-contacto a {
+    font-weight: 500;
+    word-break: break-word;
+}
+
+.dato-contacto a:hover {
+    color: var(--color-acento-texto);
+}
+
+.etiqueta {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+}
+
+.redes {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.lista-redes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.lista-redes a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.6rem 1.3rem;
+    border: 2px solid var(--color-titulo);
+    border-radius: var(--radio);
+}
+
+.lista-redes a:hover {
+    background-color: var(--color-titulo);
+    color: var(--color-fondo);
+}
+
+.lista-redes img {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* =============================================
+   14. PIE DE PÁGINA
+   ============================================= */
+.pie {
+    background-color: var(--color-barra);
+    color: var(--color-barra-texto);
+    padding: 2rem 0;
+    border-top: 3px solid var(--color-acento);
+}
+
+.pie-interno {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+.pie p {
+    margin-bottom: 0.25rem;
+}
+
+.pie address {
+    font-style: normal;
+}
+
+.pie a {
+    color: var(--color-barra-texto);
+    text-decoration: underline;
+}
+
+
+/* =============================================
+   15. CELULAR HORIZONTAL (640px y más)
+   ============================================= */
+@media screen and (min-width: 640px) {
+
+    .seccion {
+        padding: 4rem 0;
+    }
+
+    .presentacion h1 {
+        font-size: 2.5rem;
+    }
+
+    .titulo-seccion {
+        font-size: 2rem;
+    }
+
+    /* Dos tarjetas por fila (48% + 48% = 96%, el 4% restante es la separación) */
+    .tarjeta {
+        width: 48%;
+    }
+
+    .dato-contacto {
+        width: 48%;
+    }
+
+    /* Los tres datos del proceso se acomodan en fila */
+    .datos li {
+        width: 30%;
+    }
+
+}
+
+
+/* =============================================
+   16. TABLET (768px y más)
+   ============================================= */
+@media screen and (min-width: 768px) {
+
+    /* El menú pasa a ser horizontal y se oculta el botón */
+    .boton-menu {
+        display: none;
+    }
+
+    .navegacion {
+        display: flex;
+        align-items: center;
+        width: auto;
+        padding-top: 0;
+    }
+
+    .lista-menu {
+        display: flex;
+        gap: 1.25rem;
+    }
+
+    .lista-menu a {
+        padding: 0.3rem 0;
+    }
+
+  
+    .accesibilidad {
+        position: relative;
+        margin-top: 0;
+        margin-left: 1.25rem;
+    }
+
+    .boton-accesibilidad {
+        width: auto;
+    }
+
+    .panel {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 290px;
+        margin-top: 0.6rem;
+        box-shadow: var(--sombra-fuerte);
+    }
+
+
+    /* Biografía: */
+    .bloque-bio {
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+ 
+    .bloque-invertido {
+        flex-direction: row-reverse;
+    }
+
+    .bloque-bio img {
+        width: 40%;
+        height: 280px;
+    }
+
+    .texto-bio {
+        width: 60%;
+    }
+
+    .dato-contacto {
+        width: 32%;
+    }
+
+    .pie-interno {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .pie address {
+        text-align: right;
+    }
+
+}
+
+
+/* =============================================
+   17. ESCRITORIO 
+   ============================================= */
+@media screen and (min-width: 1024px) {
+
+    .seccion {
+        padding: 5rem 0;
+    }
+
+    .presentacion h1 {
+        font-size: 3rem;
+    }
+
+    .titulo-seccion {
+        font-size: 2.25rem;
+    }
+
+    /* Tres tarjetas por fila */
+    .tarjeta {
+        width: 32%;
+    }
+
+ 
+    .destacado {
+        width: 49%;
+        padding: 2rem 1.75rem;
+    }
+
+}
+
+
+
+/* =============================================
+   19. PREFERENCIA DE MOVIMIENTO REDUCIDO
+   ============================================= */
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+}

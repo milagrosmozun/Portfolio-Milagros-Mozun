@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <meta name="description" content="Portfolio de Milagros Mozún, estudiante de Negocios Digitales en UADE: proyectos de customer experience, marketing, análisis de datos y producto.">
+    <title>Portfolio - Milagros Mozún</title>
+
+    <!-- Tipografías de Google Fonts: Playfair Display (títulos) y Roboto (textos) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Hoja de estilos propia -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- =============================================
+         ENCABEZADO Y MENÚ DE NAVEGACIÓN
+    ============================================== -->
+    <header class="encabezado">
+        <div class="contenedor encabezado-interno">
+
+            <a href="#inicio" class="marca">Milagros Mozún</a>
+
+            <!-- Botón que abre y cierra el menú en pantallas chicas -->
+            <button type="button" class="boton-menu" id="boton-menu" aria-expanded="false" aria-controls="menu-principal">
+                Menú
+            </button>
+
+            <nav class="navegacion" id="menu-principal" aria-label="Navegación principal">
+                <ul class="lista-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#biografia">Biografía</a></li>
+                    <li><a href="#destacados">Proyectos</a></li>
+                    <li><a href="#ejercicios">Ejercicios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+
+                <!-- Panel de accesibilidad: tema y tamaño de texto -->
+                <div class="accesibilidad">
+                    <button type="button" class="boton-accesibilidad" id="boton-accesibilidad" aria-expanded="false" aria-controls="panel-accesibilidad">
+                        Accesibilidad
+                    </button>
+
+                    <div class="panel" id="panel-accesibilidad">
+                        <p class="panel-titulo">Personalizá tu experiencia</p>
+
+                        <p class="panel-etiqueta" id="etiqueta-tema">Tema</p>
+                        <div class="grupo-botones" role="group" aria-labelledby="etiqueta-tema">
+                            <button type="button" class="opcion activa" data-tema="claro">Claro</button>
+                            <button type="button" class="opcion" data-tema="oscuro">Oscuro</button>
+                        </div>
+
+                        <p class="panel-etiqueta" id="etiqueta-texto">Tamaño de texto</p>
+                        <div class="grupo-botones" role="group" aria-labelledby="etiqueta-texto">
+                            <button type="button" class="opcion activa" data-texto="normal">A</button>
+                            <button type="button" class="opcion" data-texto="grande">A+</button>
+                            <button type="button" class="opcion" data-texto="extra">A++</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- =============================================
+             SECCIÓN INICIO: presentación y galería
+        ============================================== -->
+        <section id="inicio" class="seccion seccion-inicio">
+            <div class="contenedor">
+
+                <div class="presentacion">
+                    <img src="img/foto_milagros.jpg" alt="Fotografía de perfil de Milagros Mozún" class="foto-perfil" width="140" height="140">
+                    <h1>Milagros Mozún</h1>
+                    <p class="texto-presentacion">
+                        Estudiante de la Licenciatura en Negocios Digitales en UADE. Me interesa el cruce entre la experiencia
+                        del cliente y los datos: comprender las necesidades de las personas y utilizar la información para mejorar
+                        la propuesta de una empresa. Busco desarrollarme en customer experience, marketing, análisis de datos o producto.
+                    </p>
+                    <div class="acciones-presentacion">
+                        <a href="#destacados" class="boton">Ver mis proyectos &#8595;</a>
+                        <a href="cv/CV-Milagros-Mozun.pdf" class="boton boton-secundario" download>Descargar CV</a>
+                    </div>
+                </div>  
+            </div>
+        </section>
+
+
+        <!-- =============================================
+             SECCIÓN BIOGRAFÍA
+        ============================================== -->
+        <section id="biografia" class="seccion seccion-biografia">
+            <div class="contenedor">
+
+                <div class="encabezado-seccion">
+                    <h2 class="titulo-seccion">Mi Biografía</h2>
+                    <p class="subtitulo-seccion">El recorrido que me trajo hasta acá.</p>
+                </div>
+
+                <!-- Bloque 1 -->
+                <article class="bloque-bio">
+                    <img src="img/9_de_julio.jpeg" alt="Vista de la ciudad de 9 de Julio, ciudad natal de Milagros">
+                    <div class="texto-bio">
+                        <p>Soy de <strong>9 de Julio</strong>, provincia de Buenos Aires. Durante cuatro años trabajé en el comercio de indumentaria de mi familia, donde estuve a cargo de la venta, la caja y el control de stock. Esa experiencia me llevó a observar el comportamiento de compra de los clientes y a preguntarme qué hacía que un producto se vendiera o no.</p>
+                        <p>Ese interés por comprender cómo funciona un negocio me llevó a elegir la <strong>Licenciatura en Negocios Digitales</strong>, una carrera que integra la gestión empresarial con las herramientas del entorno digital.</p>
+                    </div>
+                </article>
+
+                <!-- Bloque 2: imagen a la derecha en pantallas grandes -->
+                <article class="bloque-bio bloque-invertido">
+                    <img src="img/buenos_aires.jpg" alt="Vista panorámica de la ciudad de Buenos Aires">
+                    <div class="texto-bio">
+                        <p>Para estudiar me mudé a Buenos Aires, un cambio que implicó organizarme de manera independiente y adaptarme a un nuevo ritmo. Esa etapa fortaleció mi organización y mi capacidad de adaptación.</p>
+                        <p>En la facultad incorporé un principio que hoy aplico en cada proyecto: antes de proponer una solución, es fundamental comprender a fondo el problema. En la consultoría que realizamos a una pyme industrial, la visita a planta nos llevó a descartar nuestra hipótesis inicial y a reformular el diagnóstico.</p>
+                    </div>
+                </article>
+
+                <!-- Bloque 3 -->
+                <article class="bloque-bio">
+                    <img src="img/analisis_datos.jpg" alt="Pantalla mostrando gráficos de análisis de datos y métricas">
+                    <div class="texto-bio">
+                        <p>Entre 2023 y 2025 estuve a cargo de las redes sociales y la atención al cliente de <strong>The Chess MVP Academy</strong>. Gestioné la producción de contenido, respondí consultas y analicé métricas en <strong>Google Analytics y Looker Studio</strong> para identificar qué contenidos tenían mejor desempeño.</p>
+                        <p>Mi interés está en combinar el contacto con el cliente con el análisis de datos. En la facultad complementé esa base con <strong>Excel, Power BI, Python, Figma, Google Ads y Meta Ads</strong>.</p>
+                    </div>
+                </article>
+
+                <!-- Bloque 4: imagen a la derecha en pantallas grandes -->
+                <article class="bloque-bio bloque-invertido">
+                    <img src="img/perfil_profesional.jpg" alt="Retrato profesional de Milagros Mozún">
+                    <div class="texto-bio">
+                        <p>Hoy busco incorporarme a un equipo de customer experience, marketing, análisis de datos o producto, donde pueda aportar mi experiencia con clientes y mi formación analítica, y seguir desarrollándome profesionalmente.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- =============================================
+             SECCIÓN PROYECTOS DESTACADOS
+        ============================================== -->
+        <section id="destacados" class="seccion seccion-destacados">
+            <div class="contenedor">
+
+                <div class="encabezado-seccion">
+                    <h2 class="titulo-seccion">Proyectos Destacados</h2>
+                    <p class="subtitulo-seccion">Trabajos grupales de la Licenciatura en los que participé de punta a punta.</p>
+                </div>
+
+                <div class="grilla-destacados">
+
+                    <!-- Proyecto 1: Consultoría -->
+                    <article class="destacado">
+                        <p class="numero">Consultoría &middot; 2026</p>
+                        <h3>Cuando el síntoma visible no es la causa</h3>
+                        <p>Contactamos al director de una pyme industrial que no conocíamos y le propusimos una consultoría completa desde cero. Todo indicaba un problema de capacidad: almacenamiento al límite, quiebres de stock y empaque manual. Pero tenían maquinaria nueva, ya pagada, sin usar. Tras la visita a planta tuvimos que descartar nuestra primera hipótesis: el problema era de sincronización, de caja y de quién decide. Propusimos una secuencia de tres etapas, cada una con KPIs para validarla antes de pasar a la siguiente.</p>
+
+                        <p class="rol"><strong>Mi rol:</strong> relevamiento en planta, análisis del diagnóstico y definición de KPIs.</p>
+
+                        <ul class="datos">
+                            <li><span class="dato-numero">2</span> entrevistas con la dirección</li>
+                            <li><span class="dato-numero">1</span> visita a planta con producción, calidad y laboratorio</li>
+                            <li><span class="dato-numero">3</span> etapas con KPIs de validación</li>
+                        </ul>
+
+                        <ul class="etiquetas">
+                            <li>Diagnóstico organizacional</li>
+                            <li>Finanzas pyme</li>
+                            <li>KPIs</li>
+                        </ul>
+
+                        <p class="nota">Por confidencialidad no se nombra la empresa ni se comparten cifras.</p>
+                    </article>
+
+                    <!-- Proyecto 2: UX -->
+                    <article class="destacado">
+                        <p class="numero">Diseño y Desarrollo UX &middot; 2024</p>
+                        <h3>Rediseño del personalizador de un e&#8209;commerce</h3>
+                        <p>La herramienta estrella de la tienda era justo la que más frenaba a sus clientes: el personalizador web resultaba difícil para su público principal, mujeres de 45 a 60 años con poca familiaridad con ese tipo de interfaces. Seguimos Design Thinking de punta a punta y llegamos a un proceso guiado paso a paso, prototipado mobile&#8209;first en Figma y validado con usuarios reales. Éramos seis personas que no nos conocíamos y decidimos que nadie se especializara: todos pasamos por todas las etapas.</p>
+
+                        <p class="rol"><strong>Mi rol:</strong> participé en las cuatro etapas, de la investigación a los tests de usabilidad.</p>
+
+                        <ul class="datos">
+                            <li><span class="dato-numero">28</span> respuestas de encuesta y 3 entrevistas</li>
+                            <li><span class="dato-numero">5</span> tests de usabilidad, todas las tareas completadas</li>
+                            <li><span class="dato-numero">4</span> heurísticas de Nielsen corregidas al iterar</li>
+                        </ul>
+
+                        <ul class="etiquetas">
+                            <li>Design Thinking</li>
+                            <li>Figma</li>
+                            <li>UX Research</li>
+                            <li>Benchmark</li>
+                        </ul>
+
+                        <p class="nota">Alcance: prototipo propuesto, no implementado en el sitio real.</p>
+                    </article>
+
+                    <!-- Proyecto 3: Healthy Hub -->
+                    <article class="destacado">
+                        <p class="numero">Gestión de Productos Digitales &middot; 2025</p>
+                        <h3>Healthy Hub: el pivot que no queríamos hacer</h3>
+                        <p>Propuse al grupo una app para sostener hábitos saludables y arrancamos convencidos de que era una red social: compartir rutinas, recetas y logros. Cuatro encuestas y tres versiones del prototipo después, apareció algo que no esperábamos: la gente quería sentirse acompañada, pero más de la mitad prefería mantener su progreso en privado. La parte que más nos entusiasmaba era la que menos les interesaba. Cambiamos "Amigos" por "Comunidades" por objetivo y dejamos la privacidad en manos de cada usuario.</p>
+
+                        <p class="rol"><strong>Mi rol:</strong> autora de la idea y Scrum Master del equipo.</p>
+
+                        <ul class="datos">
+                            <li><span class="dato-numero">4</span> encuestas a usuarios potenciales</li>
+                            <li><span class="dato-numero">3</span> versiones de prototipo</li>
+                            <li><span class="dato-numero">1</span> pivot de concepto a partir de los datos</li>
+                        </ul>
+
+                        <ul class="etiquetas">
+                            <li>Lean Canvas</li>
+                            <li>OKR</li>
+                            <li>Impact Mapping</li>
+                            <li>Scrum</li>
+                        </ul>
+
+                        <p class="nota">El producto no fue lanzado al mercado.</p>
+                    </article>
+
+                    <!-- Proyecto 4: Testing -->
+                    <article class="destacado">
+                        <p class="numero">Testing de Aplicaciones &middot; 2025</p>
+                        <h3>La segunda vida de Healthy Hub</h3>
+                        <p>El mismo cuatrimestre teníamos que desarrollar y testear un login. En vez de inventar algo nuevo reutilizamos Healthy Hub: en una materia lo diseñábamos y en la otra lo poníamos a prueba. Escribimos historias de usuario y criterios de aceptación antes de la primera línea de código, porque sin criterio escrito no hay contra qué testear. Detectamos que se podían crear dos cuentas con el mismo mail; resolverlo correctamente requería una base de datos real, así que lo documentamos como mejora futura en lugar de forzar un parche.</p>
+
+                        <p class="rol"><strong>Mi rol:</strong> redacción de criterios de aceptación y ejecución de las rondas de prueba.</p>
+
+                        <ul class="datos">
+                            <li><span class="dato-numero">21</span> casos de prueba diseñados</li>
+                            <li><span class="dato-numero">3</span> rondas: 2 fallos, 3 fallos y ninguno</li>
+                            <li><span class="dato-numero">1</span> mejora documentada en vez de parcheada</li>
+                        </ul>
+
+                        <ul class="etiquetas">
+                            <li>Jira</li>
+                            <li>Historias de usuario</li>
+                            <li>QA</li>
+                            <li>Agile</li>
+                        </ul>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =============================================
+             SECCIÓN EJERCICIOS: galería de trabajos de cursada
+        ============================================== -->
+        <section id="ejercicios" class="seccion seccion-ejercicios">
+            <div class="contenedor">
+
+                <div class="encabezado-seccion">
+                    <h2 class="titulo-seccion">Ejercicios Prácticos</h2>
+                    <p class="subtitulo-seccion">Proyectos desarrollados a lo largo de la cursada de Diseño y Desarrollo Web.</p>
+                </div>
+
+                <div class="grilla-proyectos">
+
+                    <article class="tarjeta">
+                        <img src="img/ejercicio1.png" alt="Portada del Ejercicio 1: Introducción a HTML">
+                        <div class="tarjeta-cuerpo">
+                            <p class="numero">Ejercicio 01</p>
+                            <h3>Introducción a HTML</h3>
+                            <p>Primeros pasos con HTML: estructura básica de un documento, etiquetas de contenido, hipervínculos internos y externos, listas ordenadas y desordenadas, e inserción de imágenes.</p>
+                            <a href="ejercicios/ejercicio1/01.html" class="boton">Ver ejercicio &#8594;</a>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta">
+                        <img src="img/ejercicio2.png" alt="Portada del Ejercicio 2: Estructura Semántica HTML5">
+                        <div class="tarjeta-cuerpo">
+                            <p class="numero">Ejercicio 02</p>
+                            <h3>Estructura Semántica HTML5</h3>
+                            <p>Organización jerárquica del contenido con etiquetas semánticas de HTML5 (<code>header</code>, <code>nav</code>, <code>main</code>, <code>article</code>, <code>section</code>, <code>aside</code>, <code>footer</code>) en páginas con múltiples secciones.</p>
+                            <a href="ejercicios/ejercicio2/index.html" class="boton">Ver ejercicio &#8594;</a>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta">
+                        <img src="img/ejercicio3.png" alt="Portada del Ejercicio 3: Comenzando con CSS">
+                        <div class="tarjeta-cuerpo">
+                            <p class="numero">Ejercicio 03</p>
+                            <h3>Comenzando con CSS</h3>
+                            <p>Vinculación de hojas de estilo externas y propiedades básicas (tipografía, colores, espaciado) para replicar maquetas de referencia con fidelidad visual.</p>
+                            <a href="ejercicios/ejercicio3/013.html" class="boton">Ver ejercicio &#8594;</a>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta">
+                        <img src="img/ejercicio4.png" alt="Portada del Ejercicio 4: Propiedades de Cajas">
+                        <div class="tarjeta-cuerpo">
+                            <p class="numero">Ejercicio 04</p>
+                            <h3>Propiedades de Cajas</h3>
+                            <p>Dominio del modelo de caja (box model): <code>margin</code>, <code>padding</code>, <code>border</code>, <code>width</code> y <code>height</code> para construir secciones replicando maquetas de medidas exactas.</p>
+                            <a href="ejercicios/ejercicio4/index.html" class="boton">Ver ejercicio &#8594;</a>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta">
+                        <img src="img/ejercicio5.png" alt="Portada del Ejercicio 5: Flexbox">
+                        <div class="tarjeta-cuerpo">
+                            <p class="numero">Ejercicio 05</p>
+                            <h3>Flexbox</h3>
+                            <p>Maquetación de layouts con Flexbox (<code>display: flex</code>, <code>justify-content</code>, <code>align-items</code>, <code>flex-wrap</code>, <code>gap</code>), resolviendo cuatro layouts de complejidad creciente sin Grid ni floats.</p>
+                            <a href="ejercicios/ejercicio5/index.html" class="boton">Ver ejercicio &#8594;</a>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta">
+                        <img src="img/ejercicio6.png" alt="Portada del Ejercicio 6: Maquetado Adaptable con Media Queries">
+                        <div class="tarjeta-cuerpo">
+                            <p class="numero">Ejercicio 06</p>
+                            <h3>Maquetado Adaptable</h3>
+                            <p>Diseño responsive con CSS Media Queries: ajuste de estilos según breakpoints, orientación de pantalla, y ocultamiento o reordenamiento de elementos por tamaño.</p>
+                            <a href="ejercicios/ejercicio6/web05/index.html" class="boton">Ver ejercicio &#8594;</a>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta">
+                        <img src="img/ejercicio7.png" alt="Portada del Ejercicio 7: Primeros Pasos con Bootstrap 5">
+                        <div class="tarjeta-cuerpo">
+                            <p class="numero">Ejercicio 07</p>
+                            <h3>Primeros Pasos con Bootstrap 5</h3>
+                            <p>Sistema de grilla de Bootstrap 5: contenedores, filas y columnas, breakpoints, visibilidad por dispositivo, orden de columnas, offsets y clases utilitarias de texto.</p>
+                            <a href="ejercicios/ejercicio7/index.html" class="boton">Ver ejercicio &#8594;</a>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta">
+                        <img src="img/ejercicio8.png" alt="Portada del Ejercicio 8: Componentes con Bootstrap I">
+                        <div class="tarjeta-cuerpo">
+                            <p class="numero">Ejercicio 08</p>
+                            <h3>Componentes con Bootstrap I</h3>
+                            <p>Maquetado integral de hero units (secciones destacadas) responsive con Bootstrap 5, replicando maquetas para vistas mobile y desktop, con CSS complementario solo para fondos.</p>
+                            <a href="ejercicios/ejercicio8/index.html" class="boton">Ver ejercicio &#8594;</a>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta">
+                        <img src="img/ejercicio9.png" alt="Portada del Ejercicio 9: Componentes con Bootstrap II">
+                        <div class="tarjeta-cuerpo">
+                            <p class="numero">Ejercicio 09</p>
+                            <h3>Componentes con Bootstrap II</h3>
+                            <p>Landing page completa y responsive con componentes avanzados de Bootstrap 5: navbar, cards, carousel, modal, accordion, formularios con validación y video embebido.</p>
+                            <a href="ejercicios/ejercicio9/index.html" class="boton">Ver ejercicio &#8594;</a>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =============================================
+             SECCIÓN CONTACTO
+        ============================================== -->
+        <section id="contacto" class="seccion seccion-contacto">
+            <div class="contenedor">
+
+                <div class="encabezado-seccion">
+                    <h2 class="titulo-seccion">Contacto</h2>
+                    <p class="subtitulo-seccion">¿Querés ponerte en contacto? Podés encontrarme por estos medios.</p>
+                </div>
+
+                <div class="grilla-contacto">
+
+                    <div class="dato-contacto">
+                        <p class="etiqueta">Email personal</p>
+                        <a href="mailto:milagrosmozun2004@gmail.com">milagrosmozun2004@gmail.com</a>
+                    </div>
+
+                    <div class="dato-contacto">
+                        <p class="etiqueta">Email institucional</p>
+                        <a href="mailto:mmozun@uade.edu.ar">mmozun@uade.edu.ar</a>
+                    </div>
+
+                    <div class="dato-contacto">
+                        <p class="etiqueta">Teléfono</p>
+                        <a href="tel:+5492317401221">+54 9 2317 40-1221</a>
+                    </div>
+
+                </div>
+
+                <div class="redes">
+                    <p class="etiqueta">Perfil profesional</p>
+                    <ul class="lista-redes">
+                        <li>
+                            <a href="https://www.linkedin.com/in/milagros-moz%C3%BAn-51757b297/" target="_blank" rel="noopener noreferrer">
+                                <img src="img/icono_linkedin.png" alt="">
+                                LinkedIn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cv/CV-Milagros-Mozun.pdf" download>Descargar CV</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- =============================================
+         PIE DE PÁGINA
+    ============================================== -->
+    <footer class="pie">
+        <div class="contenedor pie-interno">
+            <div>
+                <p><strong>Milagros Mozún</strong> &mdash; Licenciatura en Negocios Digitales</p>
+                <p>UADE &ndash; Facultad de Ciencias Económicas</p>
+            </div>
+            <address>
+                <a href="mailto:milagrosmozun2004@gmail.com">milagrosmozun2004@gmail.com</a><br>
+                Buenos Aires, Argentina<br>
+                &copy; <span id="anio">2026</span> Milagros Mozún
+            </address>
+        </div>
+    </footer>
+
+    <!-- Script propio -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>
