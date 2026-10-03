@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4 - Detalle de producto con Flexbox</title>
+    <style>
+        /* ESTILOS BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: #f4f6fa;
+            padding: 2rem;
+        }
+
+        .product-page {
+            max-width: 1300px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 32px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            overflow: hidden;
+            padding: 2rem;
+        }
+
+        /* Sección superior: miniaturas + imagen principal + panel info */
+
+        .product-top {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .thumbnails {
+            display: flex; /* solo para alinear miniaturas internamente, pero no define el layout principal de columnas (el alumno debe resolver la fila de 3 secciones) */
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+        .thumb {
+            width: 100px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            flex-direction: column;
+        }
+        .main-image {
+            background: #f0f2f5;
+            border-radius: 24px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .main-image img {
+            max-width: 100%;
+            border-radius: 20px;
+            display: flex;
+            flex: 2;
+        }
+        .info-panel {
+            background: #f9fafc;
+            border-radius: 24px;
+            padding: 1.2rem;
+        }
+        .product-title {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        .price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #1e6f5c;
+            margin: 1rem 0;
+        }
+        .sizes {
+            display: inline-flex;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        .size {
+            border: 1px solid #ccc;
+            padding: 0.5rem 1rem;
+            border-radius: 40px;
+        }
+        .btn-buy {
+            background: #1e6f5c;
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 1rem;
+            border-radius: 60px;
+            font-weight: bold;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        /* Pestañas simuladas */
+        .tabs {
+            margin-top: 3rem;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1.5rem;
+        }
+        .tab-buttons {
+            display: flex; /* solo para alinear pestañas internamente, pero el layout general de la página lo define el alumno */
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .tab {
+            background: #eef2ff;
+            padding: 0.5rem 1.5rem;
+            border-radius: 40px;
+        }
+        .tab-content {
+            background: #fafcff;
+            padding: 1.5rem;
+            border-radius: 20px;
+        }
+
+        /* Productos relacionados */
+
+        .related-grid{
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .related-title {
+            margin: 2rem 0 1rem 0;
+        }
+        .related-item {
+            background: white;
+            border-radius: 20px;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border: 1px solid #edf2f7;
+        }
+        .related-img {
+            width: 200px;
+            border-radius: 16px;
+        }
+        /* ===== AGREGAR FLEXBOX AQUÍ ===== */
+        
+    </style>
+</head>
+<body>
+    <div class="product-page">
+        <!-- FILA PRINCIPAL: miniaturas + imagen principal + panel info -->
+        <div class="product-top">
+            <!-- Miniaturas izquierda -->
+            <div class="thumbnails">
+                <img class="thumb" src="https://picsum.photos/id/20/100/100" alt="miniatura 1">
+                <img class="thumb" src="https://picsum.photos/id/26/100/100" alt="miniatura 2">
+                <img class="thumb" src="https://picsum.photos/id/96/100/100" alt="miniatura 3">
+            </div>
+            <!-- Imagen principal -->
+            <div class="main-image">
+                <img src="https://picsum.photos/id/20/500/400" alt="Producto principal">
+            </div>
+            <!-- Panel de información -->
+            <div class="info-panel">
+                <div class="product-title">Auriculares WavePro X</div>
+                <div class="price">$59.990</div>
+                <p>Cancelación de ruido, batería 30h, diseño ergonómico. Ideal para gamers y profesionales.</p>
+                <div class="sizes">
+                    <span class="size">S</span>
+                    <span class="size">M</span>
+                    <span class="size">L</span>
+                </div>
+                <button class="btn-buy">🛒 Añadir al carrito</button>
+            </div>
+        </div>
+
+        <!-- Pestañas simuladas -->
+        <div class="tabs">
+            <div class="tab-buttons">
+                <div class="tab">Descripción</div>
+                <div class="tab">Especificaciones</div>
+                <div class="tab">Opiniones (24)</div>
+            </div>
+            <div class="tab-content">
+                <p>✅ Sonido de alta fidelidad con drivers de 40mm. Compatible con Bluetooth 5.2. Incluye estuche de carga y cable USB-C. Materiales reciclados.</p>
+            </div>
+        </div>
+
+        <!-- Productos relacionados -->
+        <h3 class="related-title">🔥 Productos relacionados</h3>
+        <div class="related-grid">
+            <div class="related-item">
+                <img class="related-img" src="https://picsum.photos/id/1/150/150" alt="Rel 1">
+                <p>Teclado mecánico</p>
+                <strong>$45.990</strong>
+            </div>
+            <div class="related-item">
+                <img class="related-img" src="https://picsum.photos/id/0/150/150" alt="Rel 2">
+                <p>Mouse RGB</p>
+                <strong>$24.990</strong>
+            </div>
+            <div class="related-item">
+                <img class="related-img" src="https://picsum.photos/id/42/150/150" alt="Rel 3">
+                <p>Base refrigerante</p>
+                <strong>$32.500</strong>
+            </div>
+            <div class="related-item">
+                <img class="related-img" src="https://picsum.photos/id/82/150/150" alt="Rel 4">
+                <p>Pad XXL</p>
+                <strong>$12.990</strong>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 2rem; background: #e9ecef; padding: 1rem; border-radius: 8px; font-family: monospace; max-width: 1300px; margin-left: auto; margin-right: auto;">
+        <strong>📌 ENUNCIADO EJERCICIO 4 (Muy complejo):</strong><br>
+        - Únicamente con Flexbox (sin Grid, sin position absoluta), resuelve:<br>
+        1. <code>.product-top</code>: tres columnas (miniaturas, imagen principal, panel info). Las miniaturas deben tener ancho fijo de 100px. La imagen principal debe ocupar el espacio flexible restante (ej. <code>flex: 2</code>). El panel de info debe tener <code>flex: 1.2</code> aprox.<br>
+        2. Dentro de la columna de miniaturas, usa <code>flex-direction: column</code> para apilarlas verticalmente.<br>
+        3. Los productos relacionados (<code>.related-grid</code>) deben mostrarse en fila horizontal con <code>flex-wrap: wrap</code>, espaciado uniforme y cada tarjeta con un ancho base de 200px (o flexible).<br>
+        4. Las pestañas no requieren flex adicional, pero la página completa debe verse como un layout profesional de e-commerce.<br>
+        5. Asegúrate de que no haya desbordes y usa <code>gap</code> donde sea necesario.
+    </div>
+</body>
+</html>

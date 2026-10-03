@@ -1,0 +1,118 @@
+/* ============================================
+   CUSTOM CSS — Solo fondos de secciones
+   ============================================ */
+
+/* Hero 1: Blanco con ilustración centrada */
+.hero-1 {
+  background-color: #ffffff;
+}
+
+/* Hero 2: Fondo azul sólido */
+.hero-2 {
+  background-color: #1a56f0;
+}
+
+/* Hero 3: Blanco */
+.hero-3 {
+  background-color: #ffffff;
+}
+
+/* Hero 4: Fondo oscuro/negro con imagen de ciudad */
+.hero-4 {
+  background-color: #111111;
+}
+
+/* Hero 5: Imagen de fondo bosque */
+.hero-5 {
+  background-image: url('img/bosque.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hero-5::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 0;
+}
+.hero-5 > .container,
+.hero-5 > .container-fluid {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero 6: Blanco con imagen de ciudad a la derecha */
+.hero-6 {
+  background-color: #ffffff;
+}
+
+/* Hero 7: Fondo amarillo/dorado */
+.hero-7 {
+  background-color: #f5c800;
+}
+
+/* Hero 8: Blanco con imagen comunidad a la izquierda */
+.hero-8 {
+  background-color: #ffffff;
+}
+
+/* Hero 9: Imagen de fondo con overlay oscuro */
+.hero-9 {
+  background-image: url('img/comunidad.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+.hero-9::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+}
+.hero-9 > .container,
+.hero-9 > .container-fluid {
+  position: relative;
+  z-index: 1;
+}
+
+/* Utilidades de posición relativa para secciones con overlay */
+.hero-with-overlay {
+  position: relative;
+}
+
+/* Imagen ciudad dentro de hero-4 */
+.hero-4-city-img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Imagen ciudad hero-6 */
+.hero-6-city-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  min-height: 280px;
+}
+
+/* Imagen comunidad hero-8 */
+.hero-8-community-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  min-height: 280px;
+}
+
+/* Mejora: asegura que las imágenes de col no se distorsionen en mobile */
+@media (max-width: 767.98px) {
+  .hero-6-city-img,
+  .hero-8-community-img {
+    min-height: 220px;
+    max-height: 260px;
+  }
+}

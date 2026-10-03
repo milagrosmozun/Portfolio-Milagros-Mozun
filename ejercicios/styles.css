@@ -1,0 +1,169 @@
+/* =========================================
+ESTILOS ESPECÍFICOS: PÁGINAS DE EJERCICIOS
+   ========================================= */
+:root {
+    --color-fondo: #FFFFFF; 
+    --color-primario: #2C3E50; 
+    --color-acento: #E67E22;  
+    --color-tarjetas: #FAFAFA; 
+    --color-texto-secundario: #455A64; 
+
+    /* Tipografías */
+    --fuente-titulos: 'Playfair Display', serif;
+    --fuente-textos: 'Roboto', sans-serif;
+}
+
+/* =========================================
+RESETEO BÁSICO Y BASE
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 1. Ajuste del contenedor principal */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el footer quede abajo aunque haya poco contenido */
+    
+    /* Aplicamos tipografía y color base a toda la página */
+    background-color: var(--color-fondo);
+    color: var(--color-primario);
+    font-family: var(--fuente-textos);
+    line-height: 1.6;
+}
+
+/* Aplicamos tipografía Playfair a los títulos y damos espaciado */
+h1, h2 {
+    font-family: var(--fuente-titulos);
+    color: var(--color-primario);
+}
+
+h1 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+/* Aplicamos el color secundario al párrafo explicativo */
+main section p {
+    color: var(--color-texto-secundario);
+}
+
+/* Centramos y damos estilo al footer para que no quede pegado */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: var(--color-texto-secundario);
+}
+
+/* =========================================
+LAYOUT Y TARJETAS
+   ========================================= */
+
+main {
+    flex: 1; 
+    width: 100%;
+    max-width: 800px; 
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* 2. Tarjeta contenedora de las resoluciones */
+main section {
+    background-color: var(--color-tarjetas);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(10, 31, 68, 0.04);
+    border: 1px solid #EFEFEF;
+}
+
+/* 3. Botón "Volver al Inicio" */
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+header nav a {
+    font-family: var(--fuente-textos);
+    font-size: 0.95rem;
+    color: var(--color-texto-secundario);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+header nav a::before {
+    content: "←"; /* Flecha minimalista */
+    margin-right: 8px;
+    color: var(--color-acento); 
+    transition: transform 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--color-primario); 
+}
+
+header nav a:hover::before {
+    transform: translateX(-5px); /* Microinteracción: la flecha se mueve hacia atrás */
+}
+
+/* 4. Lista de Archivos (Transformada en UI interactiva) */
+main section ul {
+    list-style: none;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Estilo de los enlaces */
+main section ul li a {
+    display: block;
+    padding: 16px 20px;
+    background-color: var(--color-fondo); 
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+    color: var(--color-primario);
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+/* Efecto Hover*/
+main section ul li a:hover {
+    background-color: #FFFFFF;
+    border-color: var(--color-acento);
+    box-shadow: 0 4px 10px rgba(0, 191, 165, 0.1); 
+    transform: translateX(5px); /* Movimiento sutil hacia la derecha */
+    color: var(--color-acento);
+}
+
+/* Línea lateral decorativa al pasar el mouse */
+main section ul li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: var(--color-acento);
+    transform: scaleY(0); /*reduce la escala vertical de un elemento a cero, lo que lo oculta visualmente sin sacarlo del código*/
+    transition: transform 0.2s ease;
+}
+
+main section ul li a:hover::before {
+    transform: scaleY(1); /*Ponemos scaleY(1) en el estado :hover porque es la instrucción que le ordena al elemento volver a su tamaño natural.*/
+}

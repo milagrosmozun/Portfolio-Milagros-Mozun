@@ -1,0 +1,12 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+header {
+    width: 1360px; height: 768px;
+    margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 100px; border: 1px solid #eee;
+}
+.sct02 { width: 600px; }
+.img02-h1 { font-family: "DM Sans", sans-serif; font-size: 60px; font-weight: 400; line-height: 1.1; margin-bottom: 35px; }
+.manrope { font-family: "Manrope", sans-serif; line-height: 1.6; color: #222; margin-bottom: 35px; font-size: 18px; }
+.img02-boton_cuenta { display: inline-block; padding: 18px 28px; background-color: black; font-family: "DM Sans", sans-serif; color: white; text-decoration: none; }
+.img02 img { width: 520px; height: auto; }

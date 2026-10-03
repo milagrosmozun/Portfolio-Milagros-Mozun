@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4: Grillas y Alineación</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Reglas de estilos personalizadas para breakpoints específicos */
+        .bloque {
+            padding: 15px;
+            font-weight: bold;
+            border-radius: 2px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            min-height: 60px;
+        }
+
+        /* 1. Comportamiento del Header */
+        .header-dinamico {
+            background-color: #fcd5d9; /* XS: Rosa */
+            color: #000;
+        }
+        @media (min-width: 576px) {
+            .header-dinamico {
+                background-color: #bbf2f6; /* SM: Celeste */
+            }
+        }
+        @media (min-width: 768px) {
+            .header-dinamico {
+                background-color: #43845b; /* MD(+): Verde */
+                color: #fff;
+            }
+        }
+
+        /* 2. Comportamiento del Bloque 2 */
+        .bloque-2 {
+            background-color: #bbf2f6; /* XS: Celeste */
+        }
+        @media (min-width: 576px) {
+            .bloque-2 {
+                background-color: #c02b37; /* SM: Rojo */
+                color: #000;
+            }
+        }
+        @media (min-width: 768px) {
+            .bloque-2 {
+                background-color: #c02b37; /* MD(+): Rojo */
+                color: #000;
+            }
+        }
+
+        /* 3. Comportamiento del Bloque 3 */
+        .bloque-3 {
+            background-color: #c02b37; /* XS: Rojo */
+        }
+        @media (min-width: 576px) {
+            .bloque-3 {
+                background-color: #90f542; /* SM: Verde claro */
+            }
+        }
+        @media (min-width: 768px) {
+            .bloque-3 {
+                background-color: #c02b37; /* MD(+): Rojo */
+            }
+        }
+
+        /* Estilos generales fijos */
+        .bg-rojo-bloque { background-color: #c02b37; }
+        .bg-amarillo-footer { background-color: #f1c232; }
+    </style>
+</head>
+<body>
+
+    <div class="container my-4">
+        
+        <div class="row mb-3">
+            <div class="col-12">
+                <div class="bloque header-dinamico text-start fs-4">Header</div>
+            </div>
+        </div>
+
+        <div class="row g-3 mb-3 text-center fs-3">
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="bloque bg-rojo-bloque justify-content-center">1</div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="bloque bloque-2 justify-content-center">2</div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-4">
+                <div class="bloque bloque-3 justify-content-center">3</div>
+            </div>
+        </div>
+
+        <div class="row g-3">
+            <div class="col-12 col-sm-12 col-md-4">
+                <div class="bloque bg-amarillo-footer justify-content-center justify-content-md-end fs-6">Footer 1</div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-8">
+                <div class="bloque bg-amarillo-footer justify-content-center justify-content-md-start fs-6">Footer 2</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

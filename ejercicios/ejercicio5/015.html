@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 - Productos destacados con Flexbox</title>
+    <style>
+        /* ========== ESTILOS BASE ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            padding: 2rem;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: #1e3c72;
+        }
+
+        .subtitulo {
+            color: #666;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Estilos de cada tarjeta (sin layout flex) */
+        .products-grid {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap
+        }
+
+        .product-card {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease;
+            
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background-color: #eef2f7;
+        }
+
+        .product-info {
+            padding: 1.2rem;
+            text-align: center;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1e3c72;
+        }
+
+        .product-price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #2c7da0;
+            margin: 0.5rem 0;
+        }
+
+        .btn {
+            background: #2c7da0;
+            color: white;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 0.5rem;
+        }
+
+        .btn:hover {
+            background: #1f5e7a;
+        }
+
+        /* ===== AGREGAR LAS REGLAS A PARTIR DE AQUÍ ===== */
+        /* Pista: el contenedor de las tarjetas tiene clase "products-grid" */
+        /* Debes lograr: fila horizontal, espacio entre tarjetas, centrado vertical, wrap opcional */
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⚡ Productos destacados</h1>
+        <div class="subtitulo">Los más vendidos de la temporada</div>
+
+        <!-- Contenedor que el alumno debe maquetar con FLEXBOX -->
+        <div class="products-grid">
+            <!-- Tarjeta 1 -->
+            <div class="product-card">
+                <img class="product-img" src="https://picsum.photos/id/20/300/200" alt="Auriculares inalámbricos">
+                <div class="product-info">
+                    <div class="product-title">Auriculares WavePro</div>
+                    <div class="product-price">$59.990</div>
+                    <button class="btn">Comprar</button>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="product-card">
+                <img class="product-img" src="https://picsum.photos/id/26/300/200" alt="Teclado mecánico">
+                <div class="product-info">
+                    <div class="product-title">Teclado Mecánico RGB</div>
+                    <div class="product-price">$89.990</div>
+                    <button class="btn">Comprar</button>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="product-card">
+                <img class="product-img" src="https://picsum.photos/id/0/300/200" alt="Mouse ergonómico">
+                <div class="product-info">
+                    <div class="product-title">Mouse Ergo Plus</div>
+                    <div class="product-price">$29.990</div>
+                    <button class="btn">Comprar</button>
+                </div>
+            </div>
+
+            <!-- Tarjeta 4 -->
+            <div class="product-card">
+                <img class="product-img" src="https://picsum.photos/id/96/300/200" alt="Monitor 24 pulgadas">
+                <div class="product-info">
+                    <div class="product-title">Monitor LED 24"</div>
+                    <div class="product-price">$199.990</div>
+                    <button class="btn">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ENUNCIADO DEL EJERCICIO (para el alumno) -->
+    <div style="margin-top: 2rem; background: #e9ecef; padding: 1rem; border-radius: 8px; font-family: monospace; max-width: 1200px; margin-left: auto; margin-right: auto;">
+        <strong>📌 ENUNCIADO EJERCICIO 1:</strong><br>
+        - Usando exclusivamente <strong>Flexbox</strong>, maqueta el contenedor <code>.products-grid</code> para que sus hijos (<code>.product-card</code>) se muestren en una <strong>fila horizontal</strong>.<br>
+        - Deben distribuirse con <strong>espacio uniforme</strong> entre ellos (usa <code>justify-content</code> o <code>gap</code>).<br>
+        - Todas las tarjetas deben tener la <strong>misma altura</strong> (usa <code>align-items</code>).<br>
+        - Si la pantalla se reduce, deben <strong>envolverse</strong> (wrap) y centrarse.<br>
+        - No modifiques las propiedades de ancho fijo de las tarjetas (ya tienen un ancho implícito por su contenido; tú controlas la distribución con Flexbox).
+    </div>
+</body>
+</html>

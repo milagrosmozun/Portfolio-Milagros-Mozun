@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BS5 Land</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+</head>
+<body>
+ 
+  <!-- 1. NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">BS5 Land</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cta">Call</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
+  <!-- 2. HERO -->
+  <section class="py-5 mt-5 text-center bg-light">
+    <div class="container py-5">
+      <h1 class="display-4 fw-bold">One Page Website Template</h1>
+      <p class="lead text-muted">We are a team of talented designers</p>
+      <a href="#about" class="btn btn-primary btn-lg">Get started</a>
+    </div>
+  </section>
+ 
+  <!-- 3. INFO CARDS -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+        <div class="col">
+          <div class="card h-100 text-center p-3 shadow-sm border-0">
+            <i class="bi bi-lightning-charge fs-1 text-primary"></i>
+            <h5 class="mt-2">Lorem ipsum</h5>
+            <p class="text-muted small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quisquam impedit reiciendis harum.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 text-center p-3 shadow-sm border-0">
+            <i class="bi bi-eye fs-1 text-primary"></i>
+            <h5 class="mt-2">Sed ut perspiciatis</h5>
+            <p class="text-muted small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quisquam impedit reiciendis harum.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 text-center p-3 shadow-sm border-0">
+            <i class="bi bi-bar-chart fs-1 text-primary"></i>
+            <h5 class="mt-2">Magni dolores</h5>
+            <p class="text-muted small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quisquam impedit reiciendis harum.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 text-center p-3 shadow-sm border-0">
+            <i class="bi bi-people fs-1 text-primary"></i>
+            <h5 class="mt-2">Nemo enim</h5>
+            <p class="text-muted small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quisquam impedit reiciendis harum.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- 4. TWO-COLUMN + 5. STATS -->
+  <section id="about" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold">About us</h2>
+        <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, culpa!</p>
+      </div>
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi corporis dolore impedit voluptatibus doloribus.</p>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Doloribus officiis possimus eveniet voluptas</li>
+            <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Nisi corporis dolore impedit voluptatum</li>
+            <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Aliquid nihil maxime culpa est porro</li>
+          </ul>
+          <a href="#" class="btn btn-outline-primary mt-2">Learn more</a>
+        </div>
+        <div class="col-lg-6">
+          <img src="img/1.jpg" class="img-fluid rounded shadow" alt="About us" />
+        </div>
+      </div>
+      <!-- Stats -->
+      <div class="row text-center mt-5 g-3">
+        <div class="col-6 col-md-3"><h2 class="fw-bold text-primary">65</h2><p class="text-muted">Happy clients</p></div>
+        <div class="col-6 col-md-3"><h2 class="fw-bold text-primary">85</h2><p class="text-muted">Projects</p></div>
+        <div class="col-6 col-md-3"><h2 class="fw-bold text-primary">12</h2><p class="text-muted">Years of experience</p></div>
+        <div class="col-6 col-md-3"><h2 class="fw-bold text-primary">15</h2><p class="text-muted">Awards</p></div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- 6. MEDIA BLOCK -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <div class="ratio ratio-16x9">
+            <iframe width="1057" height="595" src="https://www.youtube.com/embed/9-Or-1wDecs" title="Clase Online Gratuita: Tips de Desarrollo Web. Cómo Crear un E-Commerce con Wordpress" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <h4 class="fw-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+          <p class="text-muted">Nesciunt consequatur perferendis adipisci, optio laborum sunt nobis, blanditiis corporis accusamus asperiores quod iure perspiciatis.</p>
+          <ul class="list-unstyled text-muted">
+            <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Nesciunt consequatur perferendis adipisci</li>
+            <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Laborum sunt nobis, blanditiis corporis</li>
+            <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Asperiores quod iure perspiciatis</li>
+            <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Blanditiis corporis accusamus asperiores</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- 7. CAROUSEL -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div id="carrusel" class="carousel slide shadow rounded overflow-hidden" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carrusel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#carrusel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#carrusel" data-bs-slide-to="2"></button>
+          <button type="button" data-bs-target="#carrusel" data-bs-slide-to="3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/2.jpg" class="d-block w-100" style="height:350px;object-fit:cover" alt="Slide 1" />
+            <div class="carousel-caption d-none d-md-block"><h5>First slide label</h5><p>Some representative placeholder content for the first slide.</p></div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/3.jpg" class="d-block w-100" style="height:350px;object-fit:cover" alt="Slide 2" />
+            <div class="carousel-caption d-none d-md-block"><h5>Second slide label</h5><p>Some representative placeholder content for the second slide.</p></div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/4.jpg" class="d-block w-100" style="height:350px;object-fit:cover" alt="Slide 3" />
+            <div class="carousel-caption d-none d-md-block"><h5>Third slide label</h5><p>Some representative placeholder content for the third slide.</p></div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/5.jpg" class="d-block w-100" style="height:350px;object-fit:cover" alt="Slide 4" />
+            <div class="carousel-caption d-none d-md-block"><h5>Fourth slide label</h5><p>Some representative placeholder content for the fourth slide.</p></div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- 10. CTA -->
+  <section id="cta" class="py-5 bg-primary text-white text-center">
+    <div class="container">
+      <h2 class="fw-bold">Call to action</h2>
+      <p class="lead opacity-75">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, inventore porro.</p>
+      <a href="#contact" class="btn btn-light btn-lg">Call to action</a>
+    </div>
+  </section>
+ 
+  <!-- 8. GALLERY + MODAL -->
+  <section id="gallery" class="py-5">
+    <div class="container">
+      <h2 class="fw-bold text-center mb-4">Gallery</h2>
+      <div class="row g-3">
+        <div class="col-6 col-md-3"><img src="img/6.jpg"  class="img-fluid rounded" style="height:150px;width:100%;object-fit:cover;cursor:pointer" data-bs-toggle="modal" data-bs-target="#modal" data-img="img/6.jpg"  alt="img" /></div>
+        <div class="col-6 col-md-3"><img src="img/7.jpg"  class="img-fluid rounded" style="height:150px;width:100%;object-fit:cover;cursor:pointer" data-bs-toggle="modal" data-bs-target="#modal" data-img="img/7.jpg"  alt="img" /></div>
+        <div class="col-6 col-md-3"><img src="img/8.jpg"  class="img-fluid rounded" style="height:150px;width:100%;object-fit:cover;cursor:pointer" data-bs-toggle="modal" data-bs-target="#modal" data-img="img/8.jpg"  alt="img" /></div>
+        <div class="col-6 col-md-3"><img src="img/9.jpg"  class="img-fluid rounded" style="height:150px;width:100%;object-fit:cover;cursor:pointer" data-bs-toggle="modal" data-bs-target="#modal" data-img="img/9.jpg"  alt="img" /></div>
+        <div class="col-6 col-md-3"><img src="img/10.jpg" class="img-fluid rounded" style="height:150px;width:100%;object-fit:cover;cursor:pointer" data-bs-toggle="modal" data-bs-target="#modal" data-img="img/10.jpg" alt="img" /></div>
+        <div class="col-6 col-md-3"><img src="img/11.jpg" class="img-fluid rounded" style="height:150px;width:100%;object-fit:cover;cursor:pointer" data-bs-toggle="modal" data-bs-target="#modal" data-img="img/11.jpg" alt="img" /></div>
+        <div class="col-6 col-md-3"><img src="img/12.jpg" class="img-fluid rounded" style="height:150px;width:100%;object-fit:cover;cursor:pointer" data-bs-toggle="modal" data-bs-target="#modal" data-img="img/12.jpg" alt="img" /></div>
+        <div class="col-6 col-md-3"><img src="img/1.jpg"  class="img-fluid rounded" style="height:150px;width:100%;object-fit:cover;cursor:pointer" data-bs-toggle="modal" data-bs-target="#modal" data-img="img/1.jpg"  alt="img" /></div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Modal galería -->
+  <div class="modal fade" id="modal" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-dark border-0">
+        <div class="modal-header border-0">
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-2">
+          <img id="modalImg" src="" class="img-fluid w-100 rounded" alt="Gallery" />
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- 9. FAQ ACCORDION -->
+  <section id="faq" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="fw-bold text-center mb-4">Frequently asked questions</h2>
+      <div class="accordion" id="faqAcc">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#f1">Accordion Item #1</button>
+          </h2>
+          <div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc">
+            <div class="accordion-body">This is the first item's accordion body. It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f2">Accordion Item #2</button>
+          </h2>
+          <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+            <div class="accordion-body">This is the second item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f3">Accordion Item #3</button>
+          </h2>
+          <div id="f3" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+            <div class="accordion-body">This is the third item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f4">Accordion Item #4</button>
+          </h2>
+          <div id="f4" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+            <div class="accordion-body">This is the fourth item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- 11. CONTACT FORM -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="fw-bold text-center mb-4">Contact us</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <form id="contactForm" class="needs-validation" novalidate>
+            <div class="mb-3">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control" required />
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" required />
+              <div class="invalid-feedback">Please enter a valid email.</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Message</label>
+              <textarea class="form-control" rows="4" required minlength="10"></textarea>
+              <div class="invalid-feedback">Message must be at least 10 characters.</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+            <div id="ok" class="alert alert-success mt-3 d-none">Message sent successfully!</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- 12. FOOTER -->
+  <footer class="bg-dark text-white py-4 text-center">
+    <div class="container">
+      <p class="mb-1 fw-bold">BS5 Land</p>
+      <p class="text-white-50 small mb-0">© 2024 All rights reserved.</p>
+    </div>
+  </footer>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Validación del formulario
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      this.classList.add('was-validated');
+      if (this.checkValidity()) {
+        document.getElementById('ok').classList.remove('d-none');
+        setTimeout(() => { this.reset(); this.classList.remove('was-validated'); document.getElementById('ok').classList.add('d-none'); }, 3000);
+      }
+    });
+ 
+    // Modal galería: cambia la imagen según la miniatura clickeada
+    document.getElementById('modal').addEventListener('show.bs.modal', function(e) {
+      document.getElementById('modalImg').src = e.relatedTarget.dataset.img;
+    });
+  </script>
+</body>
+</html>

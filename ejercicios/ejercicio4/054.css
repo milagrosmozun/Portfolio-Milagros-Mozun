@@ -1,0 +1,13 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+header {
+    width: 1360px; height: 768px; margin: 0 auto;
+    background-color: #05051A; background-image: url(Fotos/corners.png);
+    background-position: right bottom; background-repeat: no-repeat;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 100px; gap: 60px;
+}
+.img05-texto { width: 600px; }
+h1 { font-family: "Poppins", sans-serif; color: white; font-size: 55px; line-height: 1.15; margin-bottom: 30px; }
+p { font-family: "Manrope", sans-serif; color: #888; font-size: 20px; line-height: 1.6; }
+.img05-visual { width: 460px; position: relative; }
+.img05-visual img { width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); }

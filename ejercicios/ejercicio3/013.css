@@ -1,0 +1,107 @@
+
+        body {
+            background-color: #ffffff;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .contenedor {
+            width: 700px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 40px;
+            color: green;
+            font-weight: bold;
+            text-decoration: underline;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .intro {
+            font-family: Tahoma, sans-serif;
+            font-size: 12px;
+            color: red;
+            line-height: 1.6;
+            margin-bottom: 35px;
+            text-align: justify;
+        }
+
+
+        .texto-bordo {
+            color: #800000; 
+        }
+
+        h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 24px;
+            color: blue;
+            font-weight: bold;
+            text-decoration: underline;
+            text-align: center;
+            margin-top: 35px;
+            margin-bottom: 25px;
+        }
+
+        h3 {
+            font-family: Tahoma, sans-serif;
+            font-size: 18px;
+            color: orange;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .texto-verde {
+            font-family: Tahoma, sans-serif;
+            font-size: 12px;
+            color: green;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+
+        .texto-verde-oliva {
+            color:#556B2F
+        }
+
+        .texto-rojo-apagado {
+            font-family: Tahoma, sans-serif;
+            font-size: 12px;
+            color: #b24c4c;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        .texto-bordo-apagado {
+            color:#804040
+        }
+
+        .texto-lila {
+            font-family: Tahoma, sans-serif;
+            font-size: 12px;
+            color: #b57edc;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+        
+        .texto-violeta {
+            color:#4B0082
+        }
+
+        .texto-rosa {
+            font-family: Tahoma, sans-serif;
+            font-size: 12px;
+            color: #e86aa6;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        
+        .texto-rosa-oscuro {
+            color:#C71585
+        }
+
